@@ -2,8 +2,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 
-test('renders learn react link', () => {
+test('renders recruiter dashboard heading', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const heading = screen.getByTestId('dashboard-title');
+  expect(heading).toBeInTheDocument();
+  expect(heading).toHaveTextContent('Recruiter Dashboard');
 });
